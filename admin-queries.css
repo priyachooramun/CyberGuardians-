@@ -1,0 +1,10 @@
+
+.page-admin-queries .accordion-item { background: rgba(255, 255, 255, .9); }
+.page-admin-queries .accordion-button:not(.collapsed) { background: #e3e9f7; color: var(--ink-navy); }
+.page-admin-queries .query-text { white-space: normal; }
+.page-admin-queries .query-reply {
+    background: #f1f6ef;
+    border-left: 4px solid #198754;
+    padding: .6rem .8rem;
+    border-radius: 6px;
+}
