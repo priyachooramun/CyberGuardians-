@@ -1,0 +1,15 @@
+/* =====================================================================
+   About – about.php (Figma "About page" / "Info view")
+   Owner: Member 6
+   ===================================================================== */
+
+.page-about .ink-about-logo { width: 220px; max-width: 60%; display: block; margin: 0 auto 1rem; }
+
+.page-about h1 { font-size: 2.4rem; }
+.page-about p  { line-height: 1.7; }
+
+.page-about ul { padding-left: 1.1rem; }
+.page-about ul li { margin-bottom: .5rem; }
+.page-about ul li::marker { color: var(--ink-orange); }
+
+.page-about .bi { color: var(--ink-orange); margin-right: .4rem; }

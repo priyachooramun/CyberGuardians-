@@ -1,0 +1,25 @@
+/* =====================================================================
+   Setup check page – setup-check.php (works without Bootstrap or internet)
+   Owner: Member 1
+   ===================================================================== */
+
+body { margin: 0; font-family: system-ui, "Segoe UI", Arial, sans-serif; color: #1b1b1b; background: #e9e6e1 url("../images/bg-desk.jpg") center top / cover fixed; }
+header { display: flex; gap: 1.25rem; align-items: center; background: #000; color: #fff; padding: .8rem 1.5rem; }
+header img { height: 70px; background: #fff; border-radius: 14px; padding: 4px 10px; }
+header h1 { margin: 0; font-family: Georgia, serif; font-weight: 400; }
+header p { margin: .2rem 0 0; color: #ddd; }
+main { max-width: 1150px; margin: 1.5rem auto; padding: 0 1rem; }
+.summary { padding: .9rem 1.2rem; border-radius: 12px; font-weight: 600; margin-bottom: 1rem; }
+.summary.good { background: #d1e7dd; color: #0f5132; }
+.summary.bad { background: #f8d7da; color: #842029; }
+.summary a { display: inline-block; margin-left: .8rem; background: #061648; color: #fff; padding: .3rem .9rem; border-radius: 10px; text-decoration: none; }
+table { width: 100%; border-collapse: collapse; background: rgba(255, 255, 255, .95); border-radius: 12px; overflow: hidden; font-size: .92rem; }
+th { background: #061648; color: #fff; text-align: left; padding: .55rem .6rem; }
+td { padding: .5rem .6rem; border-top: 1px solid #e3e3e3; vertical-align: top; }
+tr.group td { background: #f4f2ee; font-weight: 700; color: #061648; }
+td.mark { width: 1.6rem; text-align: center; font-weight: 700; }
+tr.ok td.mark { color: #198754; }
+tr.fail td.mark { color: #dc3545; }
+tr.fail { background: #fff5f5; }
+tr.info td.mark { color: #0d6efd; }
+.note { font-size: .85rem; background: rgba(255, 255, 255, .8); padding: .5rem .8rem; border-radius: 8px; }

@@ -1,0 +1,25 @@
+/* =====================================================================
+   Contact – contact.php
+   Owner: Member 6
+   ===================================================================== */
+
+.page-contact h1 { font-size: 2.4rem; }
+
+.page-contact .col-lg-5 .ink-form-card {
+    background: rgba(6, 22, 72, .9);        /* navy info card, like the Figma buttons */
+    color: #fff;
+}
+.page-contact .col-lg-5 .ink-form-card .bi { color: var(--ink-orange); margin-right: .5rem; }
+
+.page-contact textarea.ink-input { min-height: 160px; }
+.page-contact button[type="submit"] { min-width: 180px; }
+
+/* "Your questions" list with the shop's replies */
+.page-contact .ink-query { border-top: 1px solid rgba(0, 0, 0, .1); padding: 1rem 0; }
+.page-contact .ink-query:first-of-type { border-top: 0; }
+.page-contact .ink-query-reply {
+    background: #f1f6ef;
+    border-left: 4px solid #198754;
+    padding: .6rem .8rem;
+    border-radius: 6px;
+}

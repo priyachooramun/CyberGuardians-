@@ -1,0 +1,7 @@
+/* =====================================================================
+   Error pages (404 / 403) – abort() in includes/helpers.php
+   Owner: Member 6
+   ===================================================================== */
+
+.page-error .ink-panel { max-width: 560px; margin: 2rem auto; background: var(--ink-card); }
+.page-error h1 { font-size: 4.5rem; color: var(--ink-orange); }

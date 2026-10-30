@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://inkcorner.local/api/schema/products-response.schema.json",
+  "title": "Product search response",
+  "description": "Returned by GET api/products.php. Owner: Member 5.",
+  "type": "object",
+  "required": ["success", "count", "products"],
+  "additionalProperties": false,
+  "properties": {
+    "success": { "type": "boolean" },
+    "count": { "type": "integer", "minimum": 0 },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "section", "price", "final_price", "price_formatted", "on_sale", "in_stock", "image", "url"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "integer", "minimum": 1 },
+          "name": { "type": "string", "minLength": 1, "maxLength": 100 },
+          "brand": { "type": ["string", "null"] },
+          "section": { "type": "string", "enum": ["stationery", "book"] },
+          "category": { "type": ["string", "null"] },
+          "price": { "type": "number", "exclusiveMinimum": 0 },
+          "final_price": { "type": "number", "exclusiveMinimum": 0 },
+          "price_formatted": { "type": "string", "pattern": "^Rs " },
+          "on_sale": { "type": "boolean" },
+          "in_stock": { "type": "boolean" },
+          "image": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    }
+  }
+}

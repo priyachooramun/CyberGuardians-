@@ -1,0 +1,38 @@
+/* =====================================================================
+   Cart – cart/index.php
+   Owner: Member 4
+   ===================================================================== */
+
+.page-cart .ink-cart-table thead th {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.05rem;
+    border-bottom: 2px solid var(--ink-navy);
+    background: transparent;
+}
+.page-cart .ink-cart-table td,
+.page-cart .ink-cart-table tfoot th { background: transparent; }
+
+.page-cart .ink-cart-thumb {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.page-cart .js-cart-qty { max-width: 90px; border-radius: 10px; }
+
+.page-cart #cartTotal { color: var(--ink-navy); }
+
+/* Row fades while it is removed by AJAX */
+.page-cart tr[data-key] { transition: opacity .2s; }
+
+.page-cart a.btn-ink { font-size: 1.15rem; }
+
+@media (max-width: 575.98px) {
+    .page-cart .ink-cart-thumb { width: 44px; height: 44px; }
+    .page-cart .ink-cart-table { font-size: .9rem; }
+}
+
+.page-cart .col-qty { width: 150px; }
