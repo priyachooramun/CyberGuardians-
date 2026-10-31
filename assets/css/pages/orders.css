@@ -1,0 +1,13 @@
+/* =====================================================================
+   My orders – account/orders.php
+   Owner: Member 4
+   ===================================================================== */
+
+.page-orders .table { --bs-table-bg: transparent; }
+.page-orders thead th {
+    font-family: var(--font-display);
+    font-weight: 400;
+    border-bottom: 2px solid var(--ink-navy);
+}
+.page-orders tbody tr:hover { background: rgba(6, 22, 72, .05); }
+.page-orders .status-badge { min-width: 88px; }

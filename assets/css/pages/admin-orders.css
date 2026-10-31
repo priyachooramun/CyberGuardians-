@@ -1,0 +1,8 @@
+/* =====================================================================
+   Admin orders list – admin/orders/index.php
+   Owner: Member 4
+   ===================================================================== */
+
+.page-admin-orders form[role="search"] .form-control { min-width: 260px; }
+.page-admin-orders .status-badge { min-width: 88px; }
+.page-admin-orders tbody tr:hover { background: rgba(255, 255, 255, .45); }

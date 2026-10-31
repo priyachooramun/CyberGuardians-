@@ -1,0 +1,43 @@
+/* =====================================================================
+   One order – account/order.php (status progress)
+   Owner: Member 4
+   ===================================================================== */
+
+.page-order .table { --bs-table-bg: transparent; }
+
+/* Paid → Processing → Shipped → Delivered */
+.page-order .ink-progress { display: flex; list-style: none; padding: 0; counter-reset: step; }
+.page-order .ink-progress li {
+    flex: 1;
+    position: relative;
+    text-align: center;
+    font-size: .9rem;
+    color: #777;
+}
+.page-order .ink-progress li::before {
+    counter-increment: step;
+    content: counter(step);
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    margin: 0 auto .35rem;
+    border-radius: 50%;
+    background: #d9d9d9;
+    color: #555;
+    position: relative;
+    z-index: 1;
+}
+/* line between the steps */
+.page-order .ink-progress li + li::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 50%;
+    width: 100%;
+    height: 3px;
+    background: #d9d9d9;
+}
+.page-order .ink-progress li.done { color: var(--ink-navy); font-weight: 600; }
+.page-order .ink-progress li.done::before { background: var(--ink-navy); color: #fff; content: "✓"; }
+.page-order .ink-progress li.done + li.done::after { background: var(--ink-navy); }

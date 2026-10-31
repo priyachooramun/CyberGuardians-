@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://inkcorner.local/api/schema/cart-request.schema.json",
+  "title": "Cart request (POST api/cart.php)",
+  "description": "Fields sent by assets/js/main.js. The server re-checks every rule in PHP. Owner: Member 5.",
+  "type": "object",
+  "required": ["action"],
+  "oneOf": [
+    {
+      "properties": {
+        "action": { "const": "add" },
+        "product_id": { "type": "integer", "minimum": 1 },
+        "variant_id": { "type": "integer", "minimum": 1 },
+        "quantity": { "type": "integer", "minimum": 1, "maximum": 50 }
+      },
+      "required": ["action", "product_id", "quantity"]
+    },
+    {
+      "properties": {
+        "action": { "const": "update" },
+        "key": { "type": "string", "pattern": "^\\d+-\\d+$" },
+        "quantity": { "type": "integer", "minimum": 0, "maximum": 50 }
+      },
+      "required": ["action", "key", "quantity"]
+    },
+    {
+      "properties": {
+        "action": { "const": "remove" },
+        "key": { "type": "string", "pattern": "^\\d+-\\d+$" }
+      },
+      "required": ["action", "key"]
+    }
+  ]
+}

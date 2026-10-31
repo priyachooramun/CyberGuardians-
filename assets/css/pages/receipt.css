@@ -1,0 +1,29 @@
+/* =====================================================================
+   Receipt – checkout/receipt.php (printable)
+   Owner: Member 4
+   ===================================================================== */
+
+.page-receipt .ink-receipt {
+    max-width: 820px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: var(--ink-shadow);
+    border-top: 6px solid var(--ink-orange);
+}
+
+.page-receipt .ink-receipt-logo { width: 130px; }
+
+.page-receipt .ink-receipt h1 { color: var(--ink-navy); }
+.page-receipt .ink-receipt thead th { border-bottom: 2px solid var(--ink-navy); }
+.page-receipt .ink-receipt tfoot th { font-size: 1.15rem; }
+
+@media (max-width: 575.98px) {
+    .page-receipt .ink-receipt { padding: 1.25rem; }
+}
+
+/* Clean black-and-white page when printed */
+@media print {
+    .page-receipt .ink-receipt { box-shadow: none; padding: 0; border: 0; max-width: none; }
+    .page-receipt .ink-main .container { max-width: none; padding: 0; }
+}

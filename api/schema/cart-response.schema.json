@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://inkcorner.local/api/schema/cart-response.schema.json",
+  "title": "Cart response",
+  "description": "Returned by GET and POST api/cart.php. Owner: Member 5.",
+  "type": "object",
+  "required": ["success", "message"],
+  "properties": {
+    "success": { "type": "boolean" },
+    "message": { "type": "string" },
+    "login_url": { "type": "string", "description": "Only present when a guest calls the API (HTTP 401)." },
+    "cart": {
+      "type": "object",
+      "required": ["count", "total", "total_formatted", "lines"],
+      "additionalProperties": false,
+      "properties": {
+        "count": { "type": "integer", "minimum": 0 },
+        "total": { "type": "number", "minimum": 0 },
+        "total_formatted": { "type": "string" },
+        "lines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["key", "product_id", "name", "quantity", "unit_price", "subtotal"],
+            "additionalProperties": false,
+            "properties": {
+              "key": { "type": "string", "pattern": "^\\d+-\\d+$" },
+              "product_id": { "type": "integer", "minimum": 1 },
+              "name": { "type": "string" },
+              "variant": { "type": ["string", "null"] },
+              "quantity": { "type": "integer", "minimum": 1, "maximum": 50 },
+              "stock": { "type": "integer", "minimum": 0 },
+              "unit_price": { "type": "number", "minimum": 0 },
+              "subtotal": { "type": "number", "minimum": 0 },
+              "subtotal_formatted": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

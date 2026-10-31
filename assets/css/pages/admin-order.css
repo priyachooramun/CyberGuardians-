@@ -1,0 +1,12 @@
+/* =====================================================================
+   Admin order detail – admin/orders/view.php
+   Owner: Member 4
+   ===================================================================== */
+
+.page-admin-order .admin-card h2 {
+    border-bottom: 2px solid var(--admin-dark);
+    padding-bottom: .4rem;
+    margin-bottom: 1rem;
+}
+.page-admin-order .table { --bs-table-bg: transparent; }
+.page-admin-order .js-confirm-cancel .form-select { max-width: 200px; }
