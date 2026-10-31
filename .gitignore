@@ -1,0 +1,17 @@
+# Personal settings (database password etc.) – each member keeps their own
+config/config.local.php
+
+# Product images uploaded while testing
+uploads/products/*
+!uploads/products/.gitkeep
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+
+# Security log written while the site runs
+storage/logs/*
+!storage/logs/.gitkeep

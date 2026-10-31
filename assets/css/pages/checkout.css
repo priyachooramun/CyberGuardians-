@@ -1,0 +1,29 @@
+/* =====================================================================
+   Payment – checkout/index.php (Figma "Payment page")
+   Owner: Member 4
+   ===================================================================== */
+
+/* Figma labels: Name, Card Number, Expiration Date, CVV/CVC, Shipping Address */
+.page-checkout .ink-field-row { grid-template-columns: 220px 1fr; }
+
+.page-checkout #card_number,
+.page-checkout #expiry,
+.page-checkout #cvv { letter-spacing: .08em; font-variant-numeric: tabular-nums; }
+
+/* "Confirm" button – navy, wide (Figma) */
+.page-checkout #payButton { min-width: 260px; font-size: 1.5rem; }
+
+/* Order summary stays visible while scrolling on wide screens */
+@media (min-width: 992px) {
+    .page-checkout .col-lg-5 > .ink-form-card:first-child { position: sticky; top: 1rem; }
+}
+.page-checkout .list-group-item { padding-left: 0; padding-right: 0; }
+
+/* Test card table */
+.page-checkout table code { color: var(--ink-navy); font-size: .85rem; }
+.page-checkout table td { background: transparent; }
+
+@media (max-width: 575.98px) {
+    .page-checkout .ink-field-row { grid-template-columns: 1fr; }
+    .page-checkout #payButton { width: 100%; }
+}

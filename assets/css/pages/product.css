@@ -1,0 +1,81 @@
+/* =====================================================================
+   Product page – shop/product.php (Figma "1 item view page")
+   Owner: Member 3
+   ===================================================================== */
+
+/* Breadcrumb on a dark chip so it reads over the photo */
+.page-product .ink-breadcrumb {
+    display: inline-flex;
+    background: rgba(0, 0, 0, .55);
+    border-radius: 8px;
+    padding: .3rem .8rem;
+}
+.page-product .ink-breadcrumb a,
+.page-product .ink-breadcrumb .active,
+.page-product .ink-breadcrumb .breadcrumb-item + .breadcrumb-item::before { color: #fff; }
+
+/* Large product image */
+.page-product .ink-product-hero {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--ink-shadow);
+}
+.page-product .ink-product-img { width: 100%; max-height: 520px; object-fit: contain; display: block; margin: 0 auto; }
+
+/* Name + price (white text as in Figma, on a dark plate for contrast) */
+.page-product .ink-title-plate {
+    background: rgba(0, 0, 0, .62);
+    color: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+.page-product .ink-product-name  { font-size: 2rem; margin-bottom: .25rem; }
+.page-product .ink-product-price { font-size: 1.8rem; margin-bottom: 0; }
+
+/* Quantity stepper */
+.page-product .ink-qty input { max-width: 90px; }
+.page-product .js-add-form .form-select.is-invalid { border-color: #dc3545; }
+
+/* "Buy now" – black button from Figma */
+.page-product .ink-buy-now {
+    background: #000;
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    border-radius: var(--ink-radius);
+}
+.page-product .ink-buy-now:hover { background: #222; color: #fff; }
+
+/* Recommended column */
+.page-product .ink-recommended-title {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    background: rgba(0, 0, 0, .55);
+    border-radius: 10px;
+    padding: .3rem;
+    margin-bottom: 1rem;
+}
+.page-product .ink-reco {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    min-height: 150px;
+    padding: .75rem;
+    border-radius: 10px;
+    background: rgba(217, 217, 217, .95);
+    color: var(--ink-text);
+    text-decoration: none;
+    transition: transform .15s;
+}
+.page-product .ink-reco img { width: 120px; height: 120px; object-fit: cover; border-radius: 6px; }
+.page-product .ink-reco:hover { outline: 2px solid var(--ink-navy); color: var(--ink-text); transform: translateX(-3px); }
+
+@media (max-width: 575.98px) {
+    .page-product .ink-product-name  { font-size: 1.5rem; }
+    .page-product .ink-product-price { font-size: 1.35rem; }
+    .page-product .ink-reco { min-height: 0; }
+    .page-product .ink-reco img { width: 80px; height: 80px; }
+}
