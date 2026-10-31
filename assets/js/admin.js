@@ -76,7 +76,8 @@
     });
 }(jQuery));
 
-/* Dashboard bar chart: heights come from data-pct */
+/* Dashboard bar chart: heights come from data-pct (set with JS, not an inline
+   style attribute, so the Content-Security-Policy can forbid inline styles). */
 document.querySelectorAll('.sales-bar[data-pct]').forEach(function (bar) {
     var pct = Math.max(0, Math.min(100, parseInt(bar.dataset.pct, 10) || 0));
     bar.style.height = pct + '%';

@@ -1,0 +1,32 @@
+/* 
+   Add / Edit product admin/products/create.php and edit.php
+    */
+
+.page-admin-product-form .admin-card { max-width: 1000px; }
+.page-admin-product-form .ink-admin-form .form-label { font-size: 1.1rem; }
+
+/* "Upload, or drag and drop" box */
+.page-admin-product-form .ink-dropzone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    min-height: 102px;
+    padding: 1rem;
+    border: 2px dashed #9aa;
+    border-radius: var(--ink-radius);
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+}
+.page-admin-product-form .ink-dropzone:hover { border-color: var(--ink-navy); }
+.page-admin-product-form .ink-dropzone.dragover { border-color: var(--ink-navy); background: #e3e9f7; }
+.page-admin-product-form .ink-dropzone.is-invalid { border-color: #dc3545; }
+.page-admin-product-form .ink-dropzone img { max-height: 120px; border-radius: 8px; }
+
+.page-admin-product-form .form-check-input:checked { background-color: var(--ink-navy); border-color: var(--ink-navy); }
+
+/* Cancel / Confirm To Add (Figma button sizes) */
+.page-admin-product-form .ink-btn-cancel,
+.page-admin-product-form .ink-btn-confirm { min-width: 178px; min-height: 43px; }

@@ -1,0 +1,10 @@
+Options -Indexes
+DirectoryIndex index.php
+
+
+<FilesMatch "^\.|\.(sql|md|log|bak|ini|lock)$">
+    Require all denied
+</FilesMatch>
+
+
+ErrorDocument 403 "Access denied."
